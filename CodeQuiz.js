@@ -57,10 +57,16 @@ startBtn.addEventListener("click", function(){
   // document.getElementById(questions).innerHTML = questionInfo[0].opt[i];
   // console.log(JSON.stringify("opt"));
   let questions = JSON.stringify(questionInfo[0].q);
-  let options = JSON.stringify(questionInfo[0].opt);
+  let options = JSON.stringify(choice);
   // console.log(myString);
-  document.getElementById("questions").innerHTML = questions + options;
-
+  document.getElementById("questions").innerHTML = questions;
+  
+  var choice = document.createElement("input");
+  choice.setAttribute("type", "checkbox")
+  document.body.appendChild(choice);
+  choice.textContent = options
+  // console.log(choice);
+  
     // function myFunction() {
     //   var displayQ = function () {
     //     console.log(questionInfo[0].q);
